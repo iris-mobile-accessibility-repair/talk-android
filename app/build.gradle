@@ -151,11 +151,6 @@ android {
     check.dependsOn 'spotbugsGplayDebugReport', 'lint', 'ktlint', 'detekt'
     lint.dependsOn 'preBuild'
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
     lintOptions {
         abortOnError false
         htmlReport true
