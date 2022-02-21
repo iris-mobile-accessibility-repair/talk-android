@@ -465,7 +465,7 @@ public class MagicPeerConnectionWrapper {
         @Override
         public void onSetSuccess() {
             if (peerConnection != null) {
-                if (peerConnection.getLocalDescription() == null) {
+                if (peerConnection.signalingState() == PeerConnection.SignalingState.HAVE_REMOTE_OFFER) {
                     peerConnection.createAnswer(magicSdpObserver, sdpConstraints);
                 }
 
